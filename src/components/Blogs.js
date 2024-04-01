@@ -5,7 +5,7 @@ import {AppContext} from '../context/AppContext'
 const Blogs = () => {
   const {posts,loading} = useContext(AppContext)
   return (
-    <div className='flex flex-col justify-center h-screen items-center gap-y-7 w-11/12 max-w-[670px] py-8 mt-[66px] mb-[70px] scrollbar'>
+    <div className='flex flex-col justify-center h-full items-center gap-y-7 w-11/12 max-w-[670px] py-8 mt-[66px] mb-[70px] scrollbar'>
       {
         loading ? (<Spinner/>) : (posts.length === 0 ? (<div>No Post Found</div>) : (posts.map((post) => (
           <div key={post.id}>
